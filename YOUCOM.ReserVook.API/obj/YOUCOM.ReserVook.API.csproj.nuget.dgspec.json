@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\My Data\\Projects\\Youcom\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj": {}
+    "C:\\My Data\\Projects\\Youcom\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj": {}
   },
   "projects": {
-    "C:\\My Data\\Projects\\Youcom\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj": {
+    "C:\\My Data\\Projects\\Youcom\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\My Data\\Projects\\Youcom\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj",
+        "projectUniqueName": "C:\\My Data\\Projects\\Youcom\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj",
         "projectName": "YOUCOM.ReserVook.API",
-        "projectPath": "C:\\My Data\\Projects\\Youcom\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj",
+        "projectPath": "C:\\My Data\\Projects\\Youcom\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj",
         "packagesPath": "C:\\Users\\Yin Mon Oo\\.nuget\\packages\\",
-        "outputPath": "C:\\My Data\\Projects\\Youcom\\ReserVook\\YOUCOM.ReserVook.API\\obj\\",
+        "outputPath": "C:\\My Data\\Projects\\Youcom\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
