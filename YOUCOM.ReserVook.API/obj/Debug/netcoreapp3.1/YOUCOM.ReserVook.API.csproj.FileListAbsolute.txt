@@ -110,7 +110,6 @@ C:\My Data\Projects\Youcom\ReserVook\YOUCOM.ReserVook.API\YOUCOM.ReserVook.API\b
 C:\My Data\Projects\Youcom\ReserVook\YOUCOM.ReserVook.API\YOUCOM.ReserVook.API\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\My Data\Projects\Youcom\ReserVook\YOUCOM.ReserVook.API\YOUCOM.ReserVook.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\My Data\Projects\Youcom\ReserVook\YOUCOM.ReserVook.API\YOUCOM.ReserVook.API\bin\Debug\netcoreapp3.1\YOUCOM.Commons.Extensions.dll
-C:\My Data\Projects\Youcom\ReserVook\YOUCOM.ReserVook.API\YOUCOM.ReserVook.API\obj\Debug\netcoreapp3.1\YOUCOM.ReserVook.API.csprojAssemblyReference.cache
 C:\My Data\Projects\Youcom\ReserVook\YOUCOM.ReserVook.API\YOUCOM.ReserVook.API\obj\Debug\netcoreapp3.1\YOUCOM.ReserVook.API.AssemblyInfoInputs.cache
 C:\My Data\Projects\Youcom\ReserVook\YOUCOM.ReserVook.API\YOUCOM.ReserVook.API\obj\Debug\netcoreapp3.1\YOUCOM.ReserVook.API.AssemblyInfo.cs
 C:\My Data\Projects\Youcom\ReserVook\YOUCOM.ReserVook.API\YOUCOM.ReserVook.API\obj\Debug\netcoreapp3.1\YOUCOM.ReserVook.API.csproj.CoreCompileInputs.cache
