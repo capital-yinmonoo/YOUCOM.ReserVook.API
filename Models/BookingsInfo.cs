@@ -6,6 +6,7 @@ namespace YOUCOM.ReserVook.API.Models
     /// <summary>連泊状況　検索条件</summary>
     public partial class BookingsCondition
     {
+
         /// <summary>会社番号</summary>
         public string CompanyNo { get; set; }
 
