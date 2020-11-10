@@ -395,6 +395,11 @@ namespace YOUCOM.ReserVook.API.Services
 
         }
 
+        /// <summary>
+        /// 指定日のアサイン情報を取得
+        /// </summary>
+        /// <param name="cond">検索条件</param>
+        /// <returns></returns>
         private List<RoomsAssignedInfo> GetDailyAssignData(RoomsAssignCondition cond)
         {
             string wkDate = cond.UseDate;
@@ -582,6 +587,61 @@ namespace YOUCOM.ReserVook.API.Services
             }
 
             return SetCheckInOutDayFlag(list, cond);
+
+        }
+
+       
+        /// <param name="cond">検索条件</param>
+        /// <returns></returns>
+        public async Task<RequestDataInfo>  GetRequestData(RequestDataCondition cond)
+        {
+            #region Create Query
+            var sql = "SELECT";
+            sql += "   mu.machine_no ";
+            sql += "  , mc.eregicard_connect_hotelcode";
+            sql += "  , mc.eregicard_connect_password";
+            sql += " FROM ";
+            sql += "   mst_company mc  ";
+            sql += "   INNER JOIN   ";
+            sql += "       mst_user mu ";
+            sql += "     ON mc.company_no = mu.company_no  ";
+            sql += "     WHERE ";
+            sql += "   mu.user_email = '" + cond.UserEmail + "'";
+            #endregion
+
+
+            var info = new RequestDataInfo();
+            using (var command = _context.Database.GetDbConnection().CreateCommand())
+            {
+
+                command.CommandText = sql;
+                _context.Database.OpenConnection();
+
+                try
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Base
+                            info.PmsPassword = reader["eregicard_connect_password"].ToString();
+                            info.HotelCode = reader["eregicard_connect_hotelcode"].ToString();
+                            info.MachineNo = reader["machine_no"].ToString();
+                        }
+                    }
+
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+                finally
+                {
+                    _context.Database.CloseConnection();
+                }
+            }
+
+            return info ;
 
         }
 

@@ -131,4 +131,20 @@ namespace YOUCOM.ReserVook.API.Models
 
     }
 
+    public partial class RequestDataCondition
+    {
+        public string CompanyNo { get; set; }
+        public string UserEmail { get; set; }
+       
+    }
+
+    public partial class RequestDataInfo
+    {
+        public string PmsID { get; set; }
+        public string PmsPassword { get; set; }
+        public string HotelCode { get; set; }
+        public string MachineNo { get; set; }
+    }
+
+
 }

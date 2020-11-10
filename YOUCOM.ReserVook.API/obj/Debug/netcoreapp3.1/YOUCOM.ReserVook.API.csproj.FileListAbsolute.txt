@@ -121,3 +121,4 @@ C:\My Data\Projects\Youcom\ReserVook\YOUCOM.ReserVook.API\YOUCOM.ReserVook.API\o
 C:\My Data\Projects\Youcom\ReserVook\YOUCOM.ReserVook.API\YOUCOM.ReserVook.API\obj\Debug\netcoreapp3.1\YOUCOM.ReserVook.API.dll
 C:\My Data\Projects\Youcom\ReserVook\YOUCOM.ReserVook.API\YOUCOM.ReserVook.API\obj\Debug\netcoreapp3.1\YOUCOM.ReserVook.API.pdb
 C:\My Data\Projects\Youcom\ReserVook\YOUCOM.ReserVook.API\YOUCOM.ReserVook.API\obj\Debug\netcoreapp3.1\YOUCOM.ReserVook.API.genruntimeconfig.cache
+C:\My Data\Projects\Youcom\ReserVook\YOUCOM.ReserVook.API\YOUCOM.ReserVook.API\obj\Debug\netcoreapp3.1\YOUCOM.ReserVook.API.csprojAssemblyReference.cache
