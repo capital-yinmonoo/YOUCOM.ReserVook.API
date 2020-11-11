@@ -607,6 +607,8 @@ namespace YOUCOM.ReserVook.API.Services
             sql += "     ON mc.company_no = mu.company_no  ";
             sql += "     WHERE ";
             sql += "   mu.user_email = '" + cond.UserEmail + "'";
+            sql += "   and mc.company_no = '" + cond.CompanyNo + "'";
+         
             #endregion
 
 
