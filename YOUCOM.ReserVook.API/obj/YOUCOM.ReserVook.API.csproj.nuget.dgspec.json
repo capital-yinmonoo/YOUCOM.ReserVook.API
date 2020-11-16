@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Ohnmar Kyi\\Ohnmar Kyi\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj": {}
+    "C:\\My Data\\Projects\\Youcom\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj": {}
   },
   "projects": {
-    "C:\\Ohnmar Kyi\\Ohnmar Kyi\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj": {
+    "C:\\My Data\\Projects\\Youcom\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Ohnmar Kyi\\Ohnmar Kyi\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj",
+        "projectUniqueName": "C:\\My Data\\Projects\\Youcom\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj",
         "projectName": "YOUCOM.ReserVook.API",
-        "projectPath": "C:\\Ohnmar Kyi\\Ohnmar Kyi\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj",
-        "packagesPath": "C:\\Users\\Ohnmar Kyi\\.nuget\\packages\\",
-        "outputPath": "C:\\Ohnmar Kyi\\Ohnmar Kyi\\ReserVook\\YOUCOM.ReserVook.API\\obj\\",
+        "projectPath": "C:\\My Data\\Projects\\Youcom\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API.csproj",
+        "packagesPath": "C:\\Users\\Yin Mon Oo\\.nuget\\packages\\",
+        "outputPath": "C:\\My Data\\Projects\\Youcom\\ReserVook\\YOUCOM.ReserVook.API\\YOUCOM.ReserVook.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ohnmar Kyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Yin Mon Oo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -51,7 +51,7 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[5.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -109,7 +109,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
