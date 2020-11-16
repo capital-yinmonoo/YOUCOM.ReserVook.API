@@ -32,6 +32,8 @@ namespace YOUCOM.ReserVook.API.Interfaces
         #region アサイン関連
         Task<List<List<RoomsAssignedInfo>>> GetDailyAssign(RoomsAssignCondition cond);
 
+      
+
         Task<List<NotAssignInfo>> GetDailyNotAssignInfo(RoomsAssignCondition cond);
 
         Task<int> AssignRoom(List<TrnReserveAssignInfo> list);
@@ -97,6 +99,8 @@ namespace YOUCOM.ReserVook.API.Interfaces
         Task<ReserveModel> GetAssignListByReserveNo(TrnReserveAssignInfo cond);
 
         Task<int> UpdateRoomDetails(UpdateRoomDetails info);
+
+        Task<RequestDataInfo> GetRequestData(RequestDataCondition cond);
 
         #endregion
 

@@ -215,6 +215,15 @@ namespace YOUCOM.ReserVook.API.Controllers
             return await _roomsService.GetDailyAssign(cond);
         }
 
+       
+        /// <param name="cond"></param>
+        /// <returns></returns>
+        [HttpPost("getRequestDataInfo")]
+        public async Task<RequestDataInfo> GetRequestDataInfo(RequestDataCondition cond)
+        {
+            return await _roomsService.GetRequestData(cond);
+        }
+
         /// <summary>
         /// 日別に未アサインリスト取得
         /// </summary>
