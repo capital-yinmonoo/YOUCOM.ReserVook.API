@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+  <env:Header>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>USERNAME</wsse:Username>
+        <wsse:Password Type="text password">PASSWORD</wsse:Password>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </env:Header>
+  <env:Body>
+    <OTA_HotelResNotifRQ xmlns="http://www.opentravel.org/OTA/2003/05" xmlns:xsd="http://www.w3.org/2001 /XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EchoToken="ECHOTOKEN" CorrelationID="CORRELATIONID" ResStatus="STATUS">
+      <RequestorID ID="REQUESTORID" />
+      <HotelReservations>
+        <HotelReservation CreateDateTime="CDT" LastModifyDateTime="UDT" ResStatus="STATUS">
+          <UniqueID ID="UNIQUEID"/>
+          <RoomStays>
+            <RoomStay>
+              <TimeSpan Start="START" End="END" />
+              <BasicPropertyInfo HotelCode="HOTELCODE" />
+            </RoomStay>
+          </RoomStays>
+          <ResGuests>
+            <ResGuest>
+              <Profiles>
+                <ProfileInfo>
+                  <UniqueID ID="UNIQUEID" />
+                  <Profile ProfileType="PROFILEINFO">
+                    <Customer Language="LANGUAGE">
+                      <PersonName>
+                        <Surname>SURNAME</Surname>
+                      </PersonName>
+                      <Email>EMAIL</Email>
+                    </Customer>
+                  </Profile>
+                </ProfileInfo>
+              </Profiles>
+            </ResGuest>
+          </ResGuests>
+        </HotelReservation>
+      </HotelReservations>
+    </OTA_HotelResNotifRQ>
+  </env:Body>
+</env:Envelope>
