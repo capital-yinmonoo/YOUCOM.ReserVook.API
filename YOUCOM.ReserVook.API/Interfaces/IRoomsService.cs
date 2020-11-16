@@ -100,8 +100,6 @@ namespace YOUCOM.ReserVook.API.Interfaces
 
         Task<int> UpdateRoomDetails(UpdateRoomDetails info);
 
-        Task<RequestDataInfo> GetRequestData(RequestDataCondition cond);
-
         #endregion
 
         #region

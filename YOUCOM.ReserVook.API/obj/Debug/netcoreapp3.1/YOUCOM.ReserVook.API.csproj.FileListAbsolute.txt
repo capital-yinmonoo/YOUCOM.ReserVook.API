@@ -244,4 +244,3 @@ C:\Ohnmar Kyi\Ohnmar Kyi\ReserVook\YOUCOM.ReserVook.API\obj\Debug\netcoreapp3.1\
 C:\Ohnmar Kyi\Ohnmar Kyi\ReserVook\YOUCOM.ReserVook.API\obj\Debug\netcoreapp3.1\YOUCOM.ReserVook.API.dll
 C:\Ohnmar Kyi\Ohnmar Kyi\ReserVook\YOUCOM.ReserVook.API\obj\Debug\netcoreapp3.1\YOUCOM.ReserVook.API.pdb
 C:\Ohnmar Kyi\Ohnmar Kyi\ReserVook\YOUCOM.ReserVook.API\obj\Debug\netcoreapp3.1\YOUCOM.ReserVook.API.genruntimeconfig.cache
-C:\Ohnmar Kyi\Ohnmar Kyi\ReserVook\YOUCOM.ReserVook.API\obj\Debug\netcoreapp3.1\YOUCOM.ReserVook.API.csprojAssemblyReference.cache
