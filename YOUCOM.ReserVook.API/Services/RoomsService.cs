@@ -3094,8 +3094,134 @@ namespace YOUCOM.ReserVook.API.Services
 
         }
 
+        #endregion
 
+        #region 
+        /// <summary>
+        /// get eCardRegistration data
+        /// </summary>
+        /// <param name="cond"></param>
+        /// <returns></returns>
+        public async Task<RequestDataInfo> GetRequestData(RequestDataCondition cond)
+        {
+            var info = new RequestDataInfo();
+            var companyObj = _context.CompanyInfo.Where(x => x.CompanyNo == cond.CompanyNo).SingleOrDefault();            
+            if (companyObj.eRegicardConnectdiv == "1")
+            {
+                #region Create Query
+                var sql = string.Empty;
+                if (CheckExistSetting(cond))
+                {
+                    sql += "select distinct tfile.reserve_no,trn.room_no,mu.machine_no,mc.url, mc.eregicard_connect_hotelcode,";
+                    sql += " mc.eregicard_connect_password,tfile.guest_name,tfile.guest_kana,tfile.zip_code,tfile.address,";
+                    sql += " tfile.phone_no,tfile.company_name from trn_name_file tfile inner join trn_reserve_assign trn on trn.company_no = tfile.company_no";
+                    sql += " and tfile.route_seq = trn.route_seq inner join mst_user mu on mu.company_no = trn.company_no";
+                    sql += " inner join mst_company mc on mc.company_no = trn.company_no where tfile.reserve_no = '" + cond.ReservationNo + "' and trn.room_no = '" + cond.RoomNo + "'";
+                    sql += " and tfile.use_date in (select arrival_date from trn_reserve_basic where reserve_no = '" + cond.ReservationNo + "')";
+                    sql += " and tfile.route_seq = trn.route_seq and mc.company_no = '" + cond.CompanyNo + "'";
 
+                }
+                else
+                {
+                    sql = " select distinct tfile.route_seq,trn.route_seq,tfile.reserve_no,trn.room_no,mu.machine_no,mc.url, ";
+                    sql += " mc.eregicard_connect_hotelcode,mc.eregicard_connect_password,tfile.guest_name,tfile.guest_kana,";
+                    sql += " tfile.zip_code, tfile.address,tfile.phone_no,tfile.company_name from trn_name_file tfile";
+                    sql += " inner join trn_reserve_assign trn on trn.company_no = tfile.company_no inner join mst_user mu on mu.company_no = trn.company_no";
+                    sql += " inner join mst_company mc on mc.company_no = trn.company_no where tfile.reserve_no = '" + cond.ReservationNo + "' and trn.room_no = '" + cond.RoomNo + "'";
+                    sql += " and tfile.use_date = '-' and tfile.route_seq = 0 and mc.company_no = '" + cond.CompanyNo + "' and trn.use_date in (select arrival_date from trn_reserve_basic where reserve_no = '" + cond.ReservationNo + "')";
+                }
+                #endregion
+
+                using (var command = _context.Database.GetDbConnection().CreateCommand())
+                {
+
+                    command.CommandText = sql;
+                    _context.Database.OpenConnection();
+
+                    try
+                    {
+                        using (var reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                info.PmsPassword = reader["eregicard_connect_password"].ToString();
+                                info.HotelCode = reader["eregicard_connect_hotelcode"].ToString();
+                                info.MachineNo = reader["machine_no"].ToString();
+                                info.ReservationNo = reader["reserve_no"].ToString();
+                                info.RoomNo = reader["room_no"].ToString();
+                                info.NameKanji = reader["guest_name"].ToString();
+                                info.NameKana = reader["guest_kana"].ToString();
+                                info.ZipCode = reader["zip_code"].ToString();
+                                info.Address1 = reader["address"].ToString();
+                                info.Company = reader["company_name"].ToString();
+                                info.Tel = reader["phone_no"].ToString();
+                                info.eRegicardConnected = companyObj.eRegicardConnectdiv;
+                                info.eRegicardUrl = reader["url"].ToString();
+                            }
+                        }
+
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.ToString());
+                    }
+                    finally
+                    {
+                        _context.Database.CloseConnection();
+                    }
+                }
+            }
+            else
+            {
+                info.eRegicardConnected = companyObj.eRegicardConnectdiv;
+            }
+            return info;
+        }
+
+        /// <summary>
+        /// check setting exists or not
+        /// </summary>
+        /// <param name="cond"></param>
+        /// <returns></returns>
+        private bool CheckExistSetting(RequestDataCondition cond)
+        {
+            #region Create Query
+            var sql = " select count(t1.use_date) from trn_name_file t1 inner join trn_reserve_assign t2 on t1.reserve_no = t2.reserve_no";
+            sql += " and t1.company_no = t2.company_no and t2.use_date in (select arrival_date from trn_reserve_basic where reserve_no = '" + cond.ReservationNo + "') ";
+            sql += " where t1.reserve_no = '" + cond.ReservationNo + "' and t1.company_no = '" + cond.CompanyNo + "' and t1.use_date != '-' and t2.room_no = '" + cond.RoomNo + "'";
+            #endregion
+            bool flag = true;
+            using (var command = _context.Database.GetDbConnection().CreateCommand())
+            {
+                command.CommandText = sql;
+                _context.Database.OpenConnection();
+
+                try
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int count = Convert.ToInt32(reader["count"].ToString());
+                            if (count == 0)
+                            {
+                                flag = false;
+                            }
+                        }
+                    }
+
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+                finally
+                {
+                    _context.Database.CloseConnection();
+                }
+            }
+            return flag;
+        }
         #endregion
     }
 }

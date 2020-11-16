@@ -447,5 +447,11 @@ namespace YOUCOM.ReserVook.API.Controllers
 
         #endregion
 
+        [HttpPost("getRequestDataInfo")]
+        public async Task<RequestDataInfo> GetRequestDataInfo(RequestDataCondition cond)
+        {
+            return await _roomsService.GetRequestData(cond);
+        }
+
     }
 }

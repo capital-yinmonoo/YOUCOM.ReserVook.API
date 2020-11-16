@@ -100,6 +100,10 @@ namespace YOUCOM.ReserVook.API.Interfaces
 
         #endregion
 
+        #region
+        Task<RequestDataInfo> GetRequestData(RequestDataCondition cond);
+        #endregion
+
 
     }
 }

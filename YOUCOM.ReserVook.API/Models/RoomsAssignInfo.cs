@@ -131,4 +131,37 @@ namespace YOUCOM.ReserVook.API.Models
 
     }
 
+    public partial class RequestDataCondition
+    {
+        public string CompanyNo { get; set; }
+        public string ReservationNo { get; set; }
+        public string RoomNo { get; set; }
+
+    }
+
+    public partial class RequestDataInfo
+    {
+        public string SystemID { get; set; }
+        public string PmsID { get; set; }
+        public string PmsPassword { get; set; }
+        public string HotelCode { get; set; }
+        public string MachineNo { get; set; }
+        public string ReservationNo { get; set; }
+        public string RoomNo { get; set; }
+        public string SystemDate { get; set; }
+        public string NameKanji { get; set; }
+        public string NameKana { get; set; }
+        public string ZipCode { get; set; }
+        public string Tel { get; set; }
+        public string Address1 { get; set; }
+        public string Address2 { get; set; }
+        public string Company { get; set; }
+        public string Nationality { get; set; }
+        public string PassportNo { get; set; }
+        public string ArriveDate { get; set; }
+        public string DepartureDate { get; set; }
+        public string eRegicardConnected { get; set; }
+        public  string eRegicardUrl { get; set; }
+    }
+
 }
