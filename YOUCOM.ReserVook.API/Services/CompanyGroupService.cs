@@ -13,7 +13,7 @@ namespace YOUCOM.ReserVook.API.Services
     public class CompanyGroupService : ICompanyGroupService
     {
         private DBContext _context;
-
+        
         public CompanyGroupService(DBContext context)
         {
             _context = context;

@@ -57,5 +57,14 @@ namespace YOUCOM.ReserVook.API.Entities
         /// <summary>会社グループ名</summary>
         [NotMapped]
         public string CompanyGroupName { get; set; }
+
+        /// <summary>Connection of eRegistraionCard System</summary>
+        public string eRegicardConnectdiv { get; set; }
+
+        /// <summary>Connected hotel code of eRegistraionCard System</summary>
+        public string eRegicardConnectHotelCode { get; set; }
+
+        /// <summary>Connected password of eRegistraionCard System</summary>
+        public string eRegicardConnectPassword { get; set; }
     }
 }

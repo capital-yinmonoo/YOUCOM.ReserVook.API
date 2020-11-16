@@ -98,6 +98,9 @@ namespace YOUCOM.ReserVook.API.Context
                 entity.Property(e => e.SavePeriod).HasColumnName("save_period");
                 entity.Property(e => e.MaxCapacity).HasColumnName("max_capacity");
                 entity.Property(e => e.CompanyGroupId).HasColumnName("company_group_id");
+                entity.Property(e => e.eRegicardConnectdiv).HasColumnName("eregicard_connect_div");
+                entity.Property(e => e.eRegicardConnectHotelCode).HasColumnName("eregicard_connect_hotelcode");
+                entity.Property(e => e.eRegicardConnectPassword).HasColumnName("eregicard_connect_password");
             });
             modelBuilder.Entity<MstUserInfo>(entity =>
             {

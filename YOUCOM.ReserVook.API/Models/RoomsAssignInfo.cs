@@ -160,7 +160,8 @@ namespace YOUCOM.ReserVook.API.Models
         public string PassportNo { get; set; }
         public string ArriveDate { get; set; }
         public string DepartureDate { get; set; }
+        public string eRegicardConnected { get; set; }
+        public  string eRegicardUrl { get; set; }
     }
-
 
 }
